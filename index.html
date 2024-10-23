@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <script src="/assets/js/index.js" defer></script>
     <title>Angel Raymondi</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="profile" aria-label="profile">
-        <section class="about" aria-label="profile_about">
-            <img src="https://2.gravatar.com/avatar/8b356809367edba75a8df18080f6b93dda5189032257e8cc2fb39511c7ffdb57?size=512"
-                alt="Profile picture">
-            <h1>Angel Raymondi</h1>
-            <ul class="attributes" aria-label="profile_attributes">
-                <li>Angel</li>
-                <span>·</span>
-                <li>Él/He/Him</li>
-                <span>·</span>
-                <li>Lima, Perú</li>
-            </ul>
-            <ul class="social-media" aria-label="profile_social-media">
-                <li>
-                    <a href="https://github.com/angelraymondi">
-                        <img src="/assets/svg/github.svg" alt="@angelraymondi on Github">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/angelraymondi">
-                        <img src="/assets/svg/github.svg" alt="@angelraymondi on Github">
-                    </a>
-                </li>
-            </ul>
-            <div class="actions">
-                <button class="share" type="button">Compartir</button>
-                <button class="pay" type="button">Enviar dinero</button>
-            </div>
-        </section>
+      <section class="about" aria-label="profile_about">
+        <div class="controls">
+          <button class="show-qr" type="button" aria-label="show-qr">
+            <i class="fa-solid fa-qrcode"></i>
+          </button>
+          <button class="toggle-theme" type="button" aria-label="toggle-theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+        <div class="picture">
+          <div class="container-qr">
+            <div class="qr"></div>
+          </div>
+        </div>
+        <h1>Angel Raymondi</h1>
+        <ul class="attributes" aria-label="profile_attributes">
+          <li>Angel</li>
+          <span>·</span>
+          <li>Él/He/Him</li>
+          <span>·</span>
+          <li>Lima, Perú</li>
+        </ul>
+        <ul class="social-media" aria-label="profile_social-media">
+          <li>
+            <a href="https://github.com/angelraymondi" style="--lm-color: #000; --dm-color: #fff;" title="@angelraymondi on Github" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </li>
+        </ul>
+        <div class="actions">
+          <button class="share" type="button">Compartir</button>
+          <button class="pay" type="button">Enviar dinero</button>
+        </div>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>
