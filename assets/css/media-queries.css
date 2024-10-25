@@ -1,0 +1,87 @@
+@media (1000px >= width) {
+  main {
+    width: 80%;
+  }
+}
+
+@media (800px >= width) {
+  main {
+    width: 90%;
+  }
+}
+
+@media (600px >= width) {
+  main.profile {
+    padding: 1em 0;
+    width: calc(100% - 2em);
+  }
+
+  section.about > .controls > button.toggle-theme {
+    display: none;
+  }
+
+  section.about > h1 {
+    font-size: 2em !important;
+  }
+
+  section.about > .actions {
+    gap: 10px !important;
+
+    & > button {
+      padding: 20px 7px !important;
+    }
+  }
+}
+
+@media (450px >= width) {
+  
+  section.about > .actions {
+    gap: 10px !important;
+
+    & > button {
+      padding: 20px 7px !important;
+      font-size: 1.1em !important;
+    }
+  }
+}
+
+@media (420px >= width) {
+  body {
+    font-size: .95em;
+  }
+
+  section.about > .controls {
+    justify-content: start !important;
+    z-index: 1;
+  }
+
+  section.about > .actions {
+    gap: 10px !important;
+    flex-direction: column;
+
+    & > button {
+      padding: 15px 0 !important;
+      font-size: 1.1em !important;
+    }
+  }
+}
+
+@media (350px >= width) {
+  section {
+    gap: 1em !important;
+    padding: 2em !important;
+  }
+
+  section.about .picture {
+    width: 150px !important;
+  }
+
+  section.about > h1 {
+    font-size: 1.9em !important;
+  }
+
+  section.about .attributes {
+    font-size: 0.95em !important;
+    flex-wrap: wrap;
+  }
+}

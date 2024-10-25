@@ -1,0 +1,37 @@
+section.social-media > .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  & > .account {
+    padding: 1em .5em;
+
+    .account__title {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: .5em;
+      margin-bottom: .5em;
+
+      i {
+        display: grid;
+        place-items: center;
+        width: 1em;
+        aspect-ratio: 1/1;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .account__body {
+      padding-left: 1.5em;
+
+      a {
+        text-decoration: none;
+        color: var(--link-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+body {
+  --body-bg-gradient: linear-gradient(
+    135deg,
+    rgb(202, 248, 128) 0%,
+    rgb(113, 206, 126) 50%,
+    #000714 50%
+  );
+  --body-bg-size: 200% 200%;
+  --body-bg-position: top left;
+
+  --focus-gradient: #fff;
+
+  --section-bg: #fff;
+
+  --heading-color: #000;
+
+  --text-bg: #fff;
+  --text-color: #000;
+  --text-color-light: #3b3b3b;
+  --text-color-extra-light: #737373;
+
+  --button-bg: #fff;
+  --button-border-color: #000;
+  --button-text-color: #000;
+  --button-hover-bg: var(--button-text-color);
+  --button-hover-text-color: var(--button-bg);
+
+  --link-color: rgb(0, 90, 12);
+}
+
+body.dark {
+  --body-bg-position: bottom right;
+
+  --focus-gradient: linear-gradient(
+    135deg,
+    rgb(202, 248, 128) 0%,
+    rgb(113, 206, 126) 100%
+  );
+
+  --section-bg: #000d26;
+
+  --heading-color: rgb(39, 255, 28);
+
+  --text-bg: #000;
+  --text-color: #6cff7b;
+  --text-color-light: #abffb3;
+  --text-color-extra-light: #c4ffca;
+
+  --button-bg: #000d26;
+  --button-border-color: #6cff7b;
+  --button-text-color: #6cff7b;
+  --button-hover-bg: var(--button-text-color);
+  --button-hover-text-color: var(--button-bg);
+  
+  --link-color: rgb(181, 255, 191);
+
+  section > img {
+    box-shadow: 0px 0px 0px 4px rgb(202, 248, 128);
+  }
+}
