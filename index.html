@@ -41,15 +41,17 @@
     <title>Angel Raymondi - Perfil público</title>
   </head>
 
-  <body>
+  <body data-theme="light">
     <main class="profile" aria-label="profile">
       <section class="about" aria-label="profile_about">
         <div class="controls">
           <button class="show-qr" type="button" aria-label="show-qr">
-            <i class="fa-solid fa-qrcode"></i>
+            <i class="fa-solid fa-qrcode show"></i>
+            <i class="fa-regular fa-circle-user"></i>
           </button>
           <button class="toggle-theme" type="button" aria-label="toggle-theme">
-            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-moon show"></i>
+            <i class="fa-solid fa-sun"></i>
           </button>
         </div>
         <div class="picture">
@@ -170,8 +172,5 @@
         </div>
       </section>
     </main>
-    <div style="display: none">
-      <i class="fa-solid fa-qrcode"></i>
-    </div>
   </body>
 </html>

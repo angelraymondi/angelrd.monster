@@ -23,9 +23,18 @@ section.about .controls {
     
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) background 100ms;
 
-    &.active, &:hover {
+    &.show-qr, &:hover {
       background: var(--button-hover-bg);
       color: var(--button-hover-text-color);
+    }
+
+    & > i {
+      position: absolute;
+      pointer-events: none;
+
+      &:not(.show) {
+        opacity: 0;
+      }
     }
   }
 }

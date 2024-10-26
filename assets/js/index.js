@@ -1,27 +1,35 @@
-const controls = Object.fromEntries(Array.from(document.querySelectorAll('section.about .controls button')).map(e => [e.getAttribute('class'), e]));
-const picture = document.querySelector('section .picture')
+const controls = Object.fromEntries(
+  Array.from(document.querySelectorAll("section.about .controls button")).map(
+    (e) => [e.classList[0], e]
+  )
+);
+const picture = document.querySelector("section .picture");
 
-controls['toggle-theme'].addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-})
+controls["toggle-theme"].addEventListener("click", () => {
+  const actualTheme = document.body.getAttribute("data-theme");
+  if (actualTheme === "light") {
+    document.body.setAttribute("data-theme", "dark");
+  } else if (actualTheme === "dark") {
+    document.body.setAttribute("data-theme", "light");
+  }
+});
 
-function toggleClass(el, [class_a1, class_a2], [class_b1, class_b2]) {
-  if(el.classList.contains(class_a1) && el.classList.contains(class_a2)) {
-    el.classList.remove(class_a1);
-    el.classList.remove(class_a2);
-    el.classList.add(class_b1);
-    el.classList.add(class_b2);
-  } else if(el.classList.contains(class_b1) && el.classList.contains(class_b2)) {
-    el.classList.remove(class_b1);
-    el.classList.remove(class_b2);
-    el.classList.add(class_a1);
-    el.classList.add(class_a2);
+function toggleBetweenSiblings(className, el1, el2) {
+  if (el1.classList.contains(className)) {
+    el1.classList.remove(className);
+    el2.classList.add(className);
+  } else if (el2.classList.contains(className)) {
+    el2.classList.remove(className);
+    el1.classList.add(className);
   }
 }
 
-controls['show-qr'].addEventListener('click', () => {
-  picture.classList.toggle('flip');
-  
-  toggleClass(controls['show-qr'].querySelector('i'), ['fa-solid', 'fa-qrcode'], ['fa-regular', 'fa-circle-user']);
-  controls['show-qr'].classList.toggle('active');
-})
+controls["show-qr"].addEventListener("click", () => {
+  picture.classList.toggle("flip");
+
+  toggleBetweenSiblings('show', ...controls['show-qr'].children)
+});
+
+controls["toggle-theme"].addEventListener("click", () => {
+  toggleBetweenSiblings('show', ...controls['toggle-theme'].children)
+});

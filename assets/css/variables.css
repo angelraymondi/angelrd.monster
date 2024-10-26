@@ -6,6 +6,9 @@ body {
     #000714 50%
   );
   --body-bg-size: 200% 200%;
+}
+
+body[data-theme="light"] {
   --body-bg-position: top left;
 
   --focus-gradient: #fff;
@@ -28,7 +31,7 @@ body {
   --link-color: rgb(0, 90, 12);
 }
 
-body.dark {
+body[data-theme="dark"] {
   --body-bg-position: bottom right;
 
   --focus-gradient: linear-gradient(
