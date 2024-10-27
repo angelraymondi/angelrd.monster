@@ -135,6 +135,8 @@ section.about ul.social-media {
     a {
       text-decoration: none;
       color: inherit;
+      display: grid;
+      place-items: center;
     }
   }
 }

@@ -7,11 +7,12 @@ section.social-media > .links {
     padding: 1em .5em;
 
     .account__title {
+      font-size: 1.1em;
       display: flex;
       align-items: center;
       justify-content: start;
-      gap: .5em;
-      margin-bottom: .5em;
+      gap: 1ch;
+      margin-bottom: 1ch;
 
       i {
         display: grid;
@@ -26,7 +27,7 @@ section.social-media > .links {
     }
 
     .account__body {
-      padding-left: 1.5em;
+      padding-left: calc(1ch + 1.1em);
 
       a {
         text-decoration: none;
