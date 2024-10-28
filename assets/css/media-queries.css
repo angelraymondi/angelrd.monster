@@ -1,20 +1,18 @@
-@media (1000px >= width) {
+@media (1400px >= width) {
   main {
     width: 80%;
+    max-width: none;
   }
 }
 
 @media (800px >= width) {
-  main {
-    width: 90%;
-  }
-}
-
-@media (600px >= width) {
   main.profile {
     padding: 1em 0;
     width: calc(100% - 2em);
   }
+}
+
+@media (600px >= width) {
 
   section.about > .controls > button.toggle-theme {
     display: none;
