@@ -11,7 +11,7 @@ section.social-media > .links {
       display: flex;
       align-items: center;
       justify-content: start;
-      gap: 1ch;
+      gap: 1em;
       margin-bottom: 1ch;
 
       i {
@@ -27,7 +27,7 @@ section.social-media > .links {
     }
 
     .account__body {
-      padding-left: calc(1ch + 1.1em);
+      padding-left: 2.2em;
 
       a {
         text-decoration: none;
