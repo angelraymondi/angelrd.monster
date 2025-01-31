@@ -1,0 +1,76 @@
+@mixin dark-theme {
+	i.icon {
+		background-color: rgb(190, 197, 220);
+	}
+
+	section:nth-child(1) > .picture {
+		// outline-offset: 5px;
+
+		.qr {
+			border: 2px solid rgb(190, 197, 220);
+			background: rgb(10, 17, 30);
+
+			&::before {
+				background-color: rgb(190, 197, 220);
+			}
+		}
+	}
+
+	section:nth-child(1) > .controls > button {
+		border: 2px solid rgb(190, 197, 220);
+		background: transparent;
+
+		&:hover,
+		&:focus {
+			outline-color: rgba(190, 197, 220, 0.2);
+		}
+
+		&.active {
+			background-color: rgb(190, 197, 220);
+			i {
+				background-color: rgb(10, 17, 30);
+			}
+		}
+
+		i {
+			background-color: rgb(190, 197, 220);
+		}
+	}
+
+	section {
+		background: rgb(10, 17, 30);
+		color: rgb(190, 197, 220);
+	}
+
+	section:nth-child(1) > ul.info {
+		color: rgba(190, 197, 220, 0.5);
+	}
+
+	section:nth-child(1) > ul.social-media > li > a:focus-visible {
+		outline-color: rgb(190, 197, 220);
+	}
+
+	section:nth-child(1) > .button-group > button {
+		background: transparent;
+		color: rgb(190, 197, 220);
+		border-color: rgb(190, 197, 220);
+
+		&:hover,
+		&:focus {
+			background: rgb(190, 197, 220);
+			color: rgb(10, 17, 30);
+		}
+
+		&:focus {
+			outline-color: rgb(190, 197, 220);
+		}
+	}
+
+	section:nth-child(2) > div > a {
+		color: rgb(190, 197, 220, 0.5);
+
+		&:focus-visible {
+			outline-color: rgba(190, 197, 220, .5);
+		}
+	}
+}

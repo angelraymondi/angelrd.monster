@@ -1,0 +1,23 @@
+i.icon {
+	&.github-icon {
+		mask-image: url(/icons/github.svg);
+	}
+	&.twitch-icon {
+		mask-image: url(/icons/twitch.svg);
+	}
+	&.instagram-icon {
+		mask-image: url(/icons/instagram.svg);
+	}
+	&.youtube-icon {
+		mask-image: url(/icons/youtube.svg);
+	}
+	&.qrcode-icon {
+		mask-image: url(/icons/qrcode.svg);
+	}
+	&.dark-icon {
+		mask-image: url(/icons/moon.svg);
+	}
+	&.light-icon {
+		mask-image: url(/icons/sun.svg);
+	}
+}

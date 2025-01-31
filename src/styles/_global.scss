@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 50%, #000714 50%);
+	background-size: 200% 200%;
+	font-family: sans-serif;
+	min-height: 100vh;
+	transition: background-position cubic-bezier(0.165, 0.84, 0.44, 1) .3s;
+}
+
+body.light {
+	background-position: 0% 0%;
+}
+
+body.dark {
+	background-position: 100% 100%;
+}
