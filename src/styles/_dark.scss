@@ -1,6 +1,25 @@
 @mixin dark-theme {
+	--section-background-color: rgb(10, 17, 30);
+	--section-text-color: rgb(190, 197, 220);
+
 	i.icon {
 		background-color: rgb(190, 197, 220);
+	}
+
+	.button-group > button {
+		background: transparent;
+		color: rgb(190, 197, 220);
+		border-color: rgb(190, 197, 220);
+
+		&:hover,
+		&:focus {
+			background: rgb(190, 197, 220);
+			color: rgb(10, 17, 30);
+		}
+
+		&:focus {
+			outline-color: rgb(190, 197, 220);
+		}
 	}
 
 	section:nth-child(1) > .picture {
@@ -38,8 +57,8 @@
 	}
 
 	section {
-		background: rgb(10, 17, 30);
-		color: rgb(190, 197, 220);
+		background: var(--section-background-color);
+		color: var(--section-text-color);
 	}
 
 	section:nth-child(1) > ul.info {
@@ -48,22 +67,6 @@
 
 	section:nth-child(1) > ul.social-media > li > a:focus-visible {
 		outline-color: rgb(190, 197, 220);
-	}
-
-	section:nth-child(1) > .button-group > button {
-		background: transparent;
-		color: rgb(190, 197, 220);
-		border-color: rgb(190, 197, 220);
-
-		&:hover,
-		&:focus {
-			background: rgb(190, 197, 220);
-			color: rgb(10, 17, 30);
-		}
-
-		&:focus {
-			outline-color: rgb(190, 197, 220);
-		}
 	}
 
 	section:nth-child(2) > div > a {

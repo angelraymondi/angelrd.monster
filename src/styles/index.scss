@@ -1,6 +1,12 @@
 @use 'global';
+@use 'alert';
 @use 'dark' as dark;
 @use 'icons/all';
+
+:root {
+	--section-background-color: white;
+	--section-text-color: black;
+}
 
 body.dark {
 	@include dark.dark-theme;
@@ -17,7 +23,7 @@ main {
 }
 
 section {
-	background: white;
+	background: var(--section-background-color);
 	padding: 30px;
 	border-radius: 10px;
 	position: relative;
@@ -34,6 +40,7 @@ section:nth-child(1) > .controls {
 	width: calc(100% - 50px);
 	left: 25px;
 	top: 25px;
+	z-index: 1;
 
 	& > button {
 		width: 40px;
@@ -162,7 +169,7 @@ section:nth-child(1) > ul.social-media {
 	}
 }
 
-section:nth-child(1) > .button-group {
+.button-group {
 	display: flex;
 	gap: 15px;
 
@@ -232,12 +239,32 @@ section:nth-child(2) > div > a {
 	margin-left: 35px;
 	color: green;
 	text-decoration: none;
-	transition: color cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+	transition:
+		color cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s,
+		outline-color cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
 	border-radius: 5px;
 	outline: 2px solid transparent;
 	outline-offset: 5px;
 
 	&:focus-visible {
 		outline-color: green;
+	}
+}
+
+@media (width <= 1300px) {
+	main {
+		width: 80%;
+	}
+}
+
+@media (width <= 600px) {
+	main {
+		width: 85%;
+	}
+}
+
+@media (width <= 450px) {
+	main > section > .controls {
+		justify-content: start !important;
 	}
 }
