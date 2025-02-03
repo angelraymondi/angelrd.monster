@@ -127,9 +127,11 @@
 .container-alert.open {
 	display: grid;
 	animation: appear 0.3s;
+	animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .container-alert:not(.open).closing {
 	animation: vanish 0.3s;
+	animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @keyframes appear {
